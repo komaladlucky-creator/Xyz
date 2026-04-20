@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Communication Virtual Lab</title>
+</head>
+<body>
+    <h2>Communication Systems Virtual Lab</h2>
+
+    <form method="POST">
+        <label>Select Modulation:</label>
+        <select name="signal">
+            <option value="AM">AM</option>
+            <option value="FM">FM</option>
+        </select>
+        <button type="submit">Simulate</button>
+    </form>
+
+    {% if plot %}
+        <h3>Output Waveform:</h3>
+        <img src="{{ plot }}" width="600">
+    {% endif %}
+</body>
+</html>
